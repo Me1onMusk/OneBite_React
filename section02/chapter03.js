@@ -23,8 +23,13 @@ let person = {
 // let {name, age, hobby, extra = "Hello"} = person;
 
 // 3.객체 구조 분해 할당을 이용해서 함수의 매개변수를 받는 방법 
-const func = ({name, age, hobby, extra}) => {
+const funcA = ({name, age, hobby, extra}) => {
     
 }
+funcA(person);
 
-func(person);
+let x = 10;
+const funcB = ({x}) => {
+    console.log(x);
+};
+funcB(count = {x})
