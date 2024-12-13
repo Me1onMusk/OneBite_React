@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Register from './components/Register';
+import HookExam from './components/HookEaxm';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <Header /> 
       <Main /> 
       <Footer />  */}
-      <Register />
+      {/* <Register /> */}
+      <HookExam />
     </>
   );
 }; 
