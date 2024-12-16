@@ -14,7 +14,7 @@ const Editor = ({onCreate}) => {
         if(e.keyCode === 13) //엔터 누르면 추가 
             onSubmit(); 
     }
-
+    
     const onSubmit = () => {
         if(content === "") { //입력값이 공백이면
             contentRef.current.focus();  //입력칸 포커스 
