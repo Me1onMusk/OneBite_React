@@ -1,0 +1,77 @@
+.ToDoItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.ToDoItem > input {
+    width: 20px;
+}
+
+.ToDoItem .content {
+    flex: 1;
+}
+
+.ToDoItem .date {
+    font-size: 14px;
+    color: gray;
+}
+
+.ToDoItem > button {
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+    width: 50px;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.modal .btn_check {
+    color: white;
+    margin: 5px;
+    font-size: 13px;
+    width: 50px;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: rgb(37, 147, 255);
+    border: none;
+}
+
+.modal .btn_cancel {
+    color: white;
+    margin: 5px;
+    font-size: 13px;
+    width: 50px;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: rgb(240, 66, 81);
+    border: none;
+}
+
+.modal .btn_check:hover {
+    background-color: rgb(30, 125, 220); 
+}
+
+.modal .btn_cancel:hover {
+    background-color: rgb(220, 55, 70); 
+}
