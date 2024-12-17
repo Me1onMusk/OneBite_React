@@ -1,9 +1,9 @@
 import "./ToDoItem.css"
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 
 const ToDoItem = ({id, isDone, content, date, onUpdate, onDelete}) => { 
-    const [isHovered, setIsHovered] = useState(false); //호버 상태
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false); //호버 상태 
+    const [isModalOpen, setIsModalOpen] = useState(false); 
 
     const onChangeCheckBox = () => {
         onUpdate(id);
@@ -52,6 +52,20 @@ const ToDoItem = ({id, isDone, content, date, onUpdate, onDelete}) => {
             )}
         </div>
     );
-};
+}; 
 
-export default ToDoItem;
+// // 고차 컴포넌트 // 
+// export default memo(ToDoItem, (prevProps, nextProps) => { 
+//     // 반환값에 따라, props가 바뀌었는지 안바뀌었는지 판단 
+//     // T -> Props 바뀌지 않음 -> 리렌더링 X 
+//     // F -> Props 바뀜 -> 리렌더링 O 
+
+//     if(prevProps.id !== nextProps) return false; 
+//     if(prevProps.isDone !== nextProps) return false; 
+//     if(prevProps.content !== nextProps.content) return false; 
+//     if(prevProps.date !== nextProps.date) return false; 
+
+//     return true;
+// }); 
+
+export default memo(ToDoItem); 
