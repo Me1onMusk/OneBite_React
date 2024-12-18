@@ -93,7 +93,7 @@ function App() {
             }
         });
     };
-
+    
     // 기존 일기 삭제 
     const onDelete = (id) => {
         dispatch({

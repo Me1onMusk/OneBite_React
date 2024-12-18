@@ -10,8 +10,13 @@ const New = () => {
     const {onCreate} = useContext(DiaryDispatchContext);
     const nav = useNavigate();
 
+    // 생성 페이지 전송 //
     const onSubmit = (input) => {
-        onCreate(input.createdDate.getTime(), input.emotionID, input.content); 
+        onCreate(
+            input.createdDate.getTime(), 
+            input.emotionID, 
+            input.content
+        ); 
         nav('/', {replace: true});  //홈 이동 & 뒤로가기 방지
     };
     
