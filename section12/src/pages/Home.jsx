@@ -4,10 +4,14 @@ import Button from "../components/Button";
 import DiaryList from "../components/DiaryList";
 import Header from "../components/Header";
 import { DiaryStateContext } from "../App";
+import usePageTitle from "../hooks/usePageTitle";
 
 const getMonthlyData = (pivotDate, data) => {
     const beginTime = new Date(pivotDate.getFullYear(), pivotDate.getMonth(), 1, 0, 0, 0).getTime();  //12월 01일 00시 00분 00초 
     const endTime = new Date(pivotDate.getFullYear(), pivotDate.getMonth()+1, 0, 23, 59, 59).getTime();  //12월 31일 23시 59분 59초 
+
+    // 메타 타이틀 변경하기 // 
+    usePageTitle("감정 일기장");
 
     return (
         data.filter((item) => beginTime <= item.createdDate && item.createdDate <= endTime)

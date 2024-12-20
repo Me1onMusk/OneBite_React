@@ -3,12 +3,16 @@ import Button from "../components/Button";
 import Header from "../components/Header";
 import Editor from "../components/Editor";
 import EmotionItem from "../components/EmotionItem";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DiaryDispatchContext } from "../App";
+import usePageTitle from "../hooks/usePageTitle";
 
 const New = () => {
     const {onCreate} = useContext(DiaryDispatchContext);
     const nav = useNavigate();
+
+    // 메타 타이틀 변경하기 // 
+    usePageTitle("새 일기 쓰기");
 
     // 생성 페이지 전송 //
     const onSubmit = (input) => {

@@ -5,11 +5,15 @@ import { useContext } from "react";
 import { DiaryDispatchContext } from "../App"; 
 import Editor from "../components/Editor"; 
 import useDiary from "../hooks/useDiary";
+import usePageTitle from "../hooks/usePageTitle";
 
 const Edit = () => { 
     const nav = useNavigate(); 
     const {onUpdate, onDelete} = useContext(DiaryDispatchContext);
     const params = useParams(); //파라미터 가져오기 
+
+    // 메타 타이틀 변경하기 // 
+    usePageTitle(`${params.id}번 일기 수정`);
 
     const curDiaryItem = useDiary(params.id);  //커스텀 훅 
     if (!curDiaryItem) {

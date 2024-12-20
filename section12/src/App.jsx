@@ -3,7 +3,7 @@ import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
 
 import Home from './pages/Home';
-import New from './pages/new';
+import New from './pages/New';
 import Diary from './pages/Diary';
 import Edit from './pages/Edit';
 import NotFound from './pages/NotFound';

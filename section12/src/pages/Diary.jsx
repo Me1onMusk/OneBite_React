@@ -5,10 +5,14 @@ import Button from "../components/Button";
 import Viewer from "../components/Viewer"; 
 import useDiary from "../hooks/useDiary";  //커스텀 훅 
 import getStringedDate from "../util/getStringedDate";
+import usePageTitle from "../hooks/usePageTitle";
 
 const Diary = () => { 
     const nav = useNavigate();
     const params = useParams(); 
+
+    // 메타 타이틀 변경하기 // 
+    usePageTitle(`${params.id}번 일기`);
 
     const curDiaryItem = useDiary(params.id);
     if (!curDiaryItem)
