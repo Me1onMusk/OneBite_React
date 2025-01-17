@@ -27,7 +27,7 @@ const DiaryList = ({data}) => {
                 <select onChange={onChangeSortType}>
                     <option value={"latest"}>최신순</option> 
                     <option value={"oldest"}>오래된 순</option> 
-                </select>
+                </select> 
                 <Button 
                     onClick={()=>{nav("/new")}} 
                     text={"새로운 일기 쓰기"} 

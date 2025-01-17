@@ -3,16 +3,17 @@ import { getEmotionImage } from "../util/get-emotion-image";
 import Button from "./Button";
 import './DiaryItem.css';
 
-const DiaryItem = ({id, createdDate, emotionID, content}) => {
+const DiaryItem = ({id, createdDate, emotionID, content}) => { 
+
     const nav = useNavigate();
 
     return (
-        <div className='DiaryItem'>
+        <div className='DiaryItem'> 
             <div 
                 onClick={() => {nav(`/diary/${id}`)}} 
                 className={`img_section img_section_${emotionID}`}>
                 <img src={getEmotionImage(emotionID)} />
-            </div>
+            </div> 
             <div 
                 onClick={() => {nav(`/diary/${id}`)}} 
                 className='info_section'>
@@ -22,8 +23,8 @@ const DiaryItem = ({id, createdDate, emotionID, content}) => {
                 <div className="content">
                     {content}
                 </div>
-            </div>
-            <div className='button_section'>
+            </div> 
+            <div className='button_section'> 
                 <Button 
                     onClick={() => {nav(`/edit/${id}`)}} 
                     text={"수정하기"} />
@@ -32,4 +33,4 @@ const DiaryItem = ({id, createdDate, emotionID, content}) => {
     );
 };
 
-export default DiaryItem;
+export default DiaryItem; 

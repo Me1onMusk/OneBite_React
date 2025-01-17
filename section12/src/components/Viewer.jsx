@@ -8,7 +8,7 @@ const Viewer = ({ emotionID, content }) => {
     const emotionItem = emotionList.find((item)=> 
         String(item.emotionID) === String(emotionID)
     );
-
+    
     return (
         <div className='Viewer'>
             <section className='img_section'>
@@ -16,7 +16,7 @@ const Viewer = ({ emotionID, content }) => {
                 <div className={`emotion_img_wrapper emotion_img_wrapper_${emotionID}`}>
                     <img src={getEmotionImage(emotionID)} />
                     <h4>{emotionItem.emotionName}</h4>
-                </div>
+                </div> 
             </section> 
             <section className='content_section'>
                 <h4>오늘의 일기</h4>

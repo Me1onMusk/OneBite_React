@@ -40,7 +40,7 @@ const Edit = () => {
             nav('/', {replace: true});  //홈 이동 & 뒤로가기 방지
         }
     };
-
+    
     return (
         <>
             <Header 

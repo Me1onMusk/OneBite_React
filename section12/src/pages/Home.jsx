@@ -31,7 +31,7 @@ const Home = () => {
     };
 
     const monthlyData = getMonthlyData(pivotDate, data);
-
+    
     return (
         <>
             <Header 
