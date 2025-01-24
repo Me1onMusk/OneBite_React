@@ -20,7 +20,7 @@ const useDiary = (id) => {
 
         setCurDiaryItem(currentDiaryItem);
     }, [id]);
-
+    
     return curDiaryItem;
 };
 

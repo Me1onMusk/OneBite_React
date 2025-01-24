@@ -23,7 +23,7 @@ const Editor = ({initData, onSubmit}) => {
             });
         }
     }, [initData]); 
-
+    
     // 날짜 넣기 // 
     const onChangeInput = (e) => {
         let name = e.target.name;
